@@ -28,7 +28,12 @@ class Home extends StatelessWidget {
             padding: const EdgeInsets.all(20),
             child: const CoffeePres(),
           ),
-          Image.asset("assets/image/coffee_bg.jpg")
+          Expanded(
+              child: Image.asset(
+            "assets/img/coffee_bg.jpg",
+            fit: BoxFit.fitWidth,
+            alignment: Alignment.bottomLeft,
+          ))
         ],
       ),
     );
