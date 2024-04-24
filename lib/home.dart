@@ -26,14 +26,14 @@ class Home extends StatelessWidget {
           Container(
             color: Colors.brown[100],
             padding: const EdgeInsets.all(20),
-            child: const CoffeePres(),
+            child: CoffeePres(enabled: true),
           ),
           Expanded(
               child: Image.asset(
             "assets/img/coffee_bg.jpg",
             fit: BoxFit.fitWidth,
             alignment: Alignment.bottomLeft,
-          ))
+          )),
         ],
       ),
     );

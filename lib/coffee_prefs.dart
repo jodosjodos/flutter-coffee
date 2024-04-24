@@ -1,7 +1,24 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class CoffeePres extends StatelessWidget {
-  const CoffeePres({super.key});
+  CoffeePres({
+    super.key,
+    required this.enabled,
+  });
+  final bool enabled;
+  var strength = 0;
+  var sugars = 0;
+  void increaseStrengths() {
+    print("increase sugar");
+  
+  }
+
+  void increaseSugars() {
+    print("increase sugar");
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +27,7 @@ class CoffeePres extends StatelessWidget {
         Row(
           children: [
             const Text("Strength: "),
-            const Text("3"),
+            Text(strength.toString()),
             Image.asset(
               "assets/img/coffee_bean.png",
               width: 25,
@@ -20,12 +37,18 @@ class CoffeePres extends StatelessWidget {
             const Expanded(
               child: SizedBox(),
             ),
-            const Text("+")
+            FilledButton(
+                onPressed: increaseStrengths,
+                style: FilledButton.styleFrom(
+                  backgroundColor: Colors.brown,
+                  foregroundColor: Colors.white,
+                ),
+                child: const Text("+"))
           ],
         ),
         Row(children: [
           const Text("Sugars: "),
-          const Text("3"),
+          Text(sugars.toString()),
           Image.asset(
             "assets/img/sugar_cube.png",
             width: 25,
@@ -35,7 +58,13 @@ class CoffeePres extends StatelessWidget {
           const Expanded(
             child: SizedBox(),
           ),
-          const Text("+")
+          FilledButton(
+              onPressed: increaseSugars,
+              style: FilledButton.styleFrom(
+                backgroundColor: Colors.brown,
+                foregroundColor: Colors.white,
+              ),
+              child: const Text("+"))
         ])
       ],
     );
