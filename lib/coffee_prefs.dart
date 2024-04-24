@@ -1,3 +1,4 @@
+import 'package:coffee_card/components/styled_body_text.dart';
 import 'package:flutter/material.dart';
 
 class CoffeePres extends StatefulWidget {
@@ -32,7 +33,7 @@ class _CoffeePresState extends State<CoffeePres> {
       children: [
         Row(
           children: [
-            const Text("Strength: "),
+            const StyledBodyText("Strength: "),
             for (int i = 0; i < strength; i++)
               Image.asset(
                 "assets/img/coffee_bean.png",
@@ -53,8 +54,8 @@ class _CoffeePresState extends State<CoffeePres> {
           ],
         ),
         Row(children: [
-          const Text("Sugars: "),
-          if (sugars == 0) const Text("no sugars..."),
+          const StyledBodyText("Sugars: "),
+          if (sugars == 0) const StyledBodyText("no sugars..."),
           for (int i = 0; i < sugars; i++)
             Image.asset(
               "assets/img/sugar_cube.png",
