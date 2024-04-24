@@ -1,3 +1,4 @@
+import 'package:coffee_card/components/stlyed_body_button.dart';
 import 'package:coffee_card/components/styled_body_text.dart';
 import 'package:flutter/material.dart';
 
@@ -44,13 +45,8 @@ class _CoffeePresState extends State<CoffeePres> {
             const Expanded(
               child: SizedBox(),
             ),
-            FilledButton(
-                onPressed: increaseStrengths,
-                style: FilledButton.styleFrom(
-                  backgroundColor: Colors.brown,
-                  foregroundColor: Colors.white,
-                ),
-                child: const Text("+"))
+            StyledBodyButton(
+                onPressed: increaseStrengths, child: const Text("+"))
           ],
         ),
         Row(children: [
@@ -66,13 +62,7 @@ class _CoffeePresState extends State<CoffeePres> {
           const Expanded(
             child: SizedBox(),
           ),
-          FilledButton(
-              onPressed: increaseSugars,
-              style: FilledButton.styleFrom(
-                backgroundColor: Colors.brown,
-                foregroundColor: Colors.white,
-              ),
-              child: const Text("+"))
+          StyledBodyButton(onPressed: increaseSugars, child: const Text("+"))
         ])
       ],
     );
