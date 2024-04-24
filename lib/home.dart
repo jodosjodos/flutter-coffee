@@ -27,7 +27,8 @@ class Home extends StatelessWidget {
             color: Colors.brown[100],
             padding: const EdgeInsets.all(20),
             child: const CoffeePres(),
-          )
+          ),
+          Image.asset("assets/image/coffee_bg.jpg")
         ],
       ),
     );
